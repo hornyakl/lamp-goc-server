@@ -13,7 +13,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Quest extends Model implements JsonSerializable
 {
+    public $timestamps = false;
+
     protected $table = 'quest';
+
+    protected $guarded = [];
 
     public function toArray()
     {

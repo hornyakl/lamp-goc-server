@@ -7,7 +7,19 @@ $app->get('/quest-create', function ($request, $response, $args) {
     return $this->renderer->render($response, 'quest-create.phtml', $args);
 });
 
-$app->get('/quest-saved', function ($request, $response, $args) {
+$app->post('/quest-saved', function ($request, $response, $args) {
+    $params = $request->getParsedBody();
+
+    $quest = new Quest([
+        'name' => $params['name'],
+        'description' => $params['description'],
+        'latitude' => $params['latitude'],
+        'longitude' => $params['longitude'],
+        'experience_point' => $params['experience_point'],
+    ]);
+
+    $quest->save();
+
     return $this->renderer->render($response, 'quest-saved.phtml', $args);
 });
 
