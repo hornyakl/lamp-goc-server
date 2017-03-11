@@ -18,8 +18,13 @@ class UserQuest extends Model
 
     protected $guarded = [];
 
-    public function users()
+    public function user()
     {
-        return $this->hasMany('questapp\models\User', 'user_id', 'id');
+        return $this->hasOne('questapp\models\User', 'user_id', 'id');
+    }
+
+    public function quest()
+    {
+        return $this->hasOne('questapp\models\Quest', 'quest_id', 'id');
     }
 }
