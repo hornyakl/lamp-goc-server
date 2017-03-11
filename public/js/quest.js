@@ -14,10 +14,10 @@ function getLocation()
 
 function showPosition(position)
 {
-    var longitude = position.coords.longitude;
     var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
 
-    document.getElementById("longitude").value = longitude;
     document.getElementById("latitude").value = latitude;
-    document.getElementById("coordinates").value = longitude + ", " + latitude;
+    document.getElementById("longitude").value = longitude;
+    document.getElementById("coordinates").value = latitude + ", " + longitude;
 }
