@@ -8,6 +8,14 @@ return [
             'latitude' => '49.600551',
             'longitude' => '6.113637',
             'experience_point' => '999',
+        ],
+        2 => [
+            'id' => '2',
+            'name' => 'Run a kilometer',
+            'description' => 'Run a kilometer around the building.',
+            'latitude' => '49.600551',
+            'longitude' => '6.113637',
+            'experience_point' => '1499',
         ]
     ],
     'settings' => [
