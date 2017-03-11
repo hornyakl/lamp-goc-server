@@ -1,7 +1,7 @@
 <?php
 return [
     'quests' => [
-        1 => [
+        [
             'id' => '1',
             'name' => 'Trash',
             'description' => 'Bring out the trash.',
@@ -9,7 +9,7 @@ return [
             'longitude' => '6.113637',
             'experience_point' => '999',
         ],
-        2 => [
+        [
             'id' => '2',
             'name' => 'Run a kilometer',
             'description' => 'Run a kilometer around the building.',
@@ -33,5 +33,15 @@ return [
             'path' => __DIR__ . '/../logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
+        'db' => [
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'database' => 'goc',
+            'username' => 'root',
+            'password' => 'xH6.H4$SUmM_',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+        ]
     ],
 ];

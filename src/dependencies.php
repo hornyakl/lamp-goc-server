@@ -3,6 +3,11 @@
 
 $container = $app->getContainer();
 
+$capsule = new \Illuminate\Database\Capsule\Manager;
+$capsule->addConnection($container['settings']['db']);
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
+
 // view renderer
 $container['renderer'] = function ($c) {
     $settings = $c->get('settings')['renderer'];
@@ -17,3 +22,10 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
     return $logger;
 };
+
+// Service factory for the ORM
+/* @return \Illuminate\Database\Capsule\Manager */
+$container['db'] = function ($container) use ($capsule){
+    return $capsule;
+};
+
