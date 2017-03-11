@@ -19,4 +19,4 @@
 * user_id
 * started_at
 * finished_at
-* experience_pointű_gathered
+* experience_point_gathered
