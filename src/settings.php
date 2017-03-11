@@ -1,5 +1,15 @@
 <?php
 return [
+    'quests' => [
+        1 => [
+            'id' => '1',
+            'name' => 'Trash',
+            'description' => 'Bring out the trash.',
+            'latitude' => '49.600551',
+            'longitude' => '6.113637',
+            'experience_point' => '999',
+        ]
+    ],
     'settings' => [
         'displayErrorDetails' => true, // set to false in production
         'addContentLengthHeader' => false, // Allow the web server to send the content-length header

@@ -11,10 +11,11 @@
 
 * id
 * name
-* (imei?)
+* uniq_id
 
 # user_quest
 
+* id
 * quest_id
 * user_id
 * started_at
