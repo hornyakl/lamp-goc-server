@@ -1,6 +1,8 @@
 <?php
 // Routes
 
+use questapp\models\Quest;
+
 $app->get('/quest-create', function ($request, $response, $args) {
     return $this->renderer->render($response, 'quest-create.phtml', $args);
 });
@@ -10,8 +12,9 @@ $app->get('/quest-saved', function ($request, $response, $args) {
 });
 
 $app->get('/quest-list', function ($request, $response, $args) {
-    $quest = $this->get('quests');
-    return $this->response->withJSON($quest);
+    $quests = (object)Quest::all()->toArray();
+
+    return $this->response->withJSON($quests);
 });
 
 $app->get('/quest-accepted', function ($request, $response, $args) {
