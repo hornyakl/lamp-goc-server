@@ -2,7 +2,7 @@
 // Routes
 
 use questapp\models\Quest;
-use questapp\models\User;
+use questapp\models\UserQuest;
 
 $app->get('/quest-create', function ($request, $response, $args) {
     return $this->renderer->render($response, 'quest-create.phtml', $args);
@@ -32,6 +32,21 @@ $app->get('/quest-list', function ($request, $response, $args) {
 
 $app->get('/quest-accepted', function ($request, $response, $args) {
     return $this->renderer->render($response, 'quest-accepted.phtml', $args);
+});
+
+$app->get('/achievements', function ($request, $response, $args) {
+    $userQuests = UserQuest::all();
+
+    $xpSummary = 0;
+    foreach($userQuests as $userQuest)
+    {
+        $xpSummary += $userQuest->experience_point_gathered;
+    }
+
+    return $this->renderer->render($response, 'achievements.phtml', [
+        'userQuests' => $userQuests,
+        'xpSummary' => $xpSummary
+    ]);
 });
 
 $app->get('/[{name}]', function ($request, $response, $args) {

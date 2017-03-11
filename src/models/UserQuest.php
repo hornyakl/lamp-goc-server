@@ -20,11 +20,11 @@ class UserQuest extends Model
 
     public function user()
     {
-        return $this->hasOne('questapp\models\User', 'user_id', 'id');
+        return $this->hasOne('questapp\models\User', 'id', 'user_id');
     }
 
     public function quest()
     {
-        return $this->hasOne('questapp\models\Quest', 'quest_id', 'id');
+        return $this->hasOne('questapp\models\Quest', 'id', 'quest_id');
     }
 }

@@ -1,0 +1,31 @@
+<?php include('blocks/head.phtml'); ?>
+
+<h1>Achievements</h1>
+
+<h2>XP: <?php echo $xpSummary; ?></h2>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Quest</th>
+        <th>Started at</th>
+        <th>Finished at</th>
+        <th>XP earned</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach($userQuests as $userQuest): ?>
+    <tr>
+        <td>
+            <?php echo $userQuest->quest->name; ?>
+            <br />
+            <small><?php echo $userQuest->quest->description; ?></small>
+        </td>
+        <td><?php echo $userQuest->started_at; ?></td>
+        <td><?php echo $userQuest->finished_at; ?></td>
+        <td><?php echo $userQuest->experience_point_gathered; ?></td>
+    </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+
+<?php include('blocks/foot.phtml'); ?>

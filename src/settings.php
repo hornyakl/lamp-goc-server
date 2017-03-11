@@ -20,7 +20,7 @@ return [
             'host' => 'localhost',
             'database' => 'goc',
             'username' => 'root',
-            'password' => 'xH6.H4$SUmM_',
+            'password' => '',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
