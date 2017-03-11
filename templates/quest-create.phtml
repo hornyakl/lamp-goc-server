@@ -3,14 +3,17 @@
 <form class="form-horizontal">
     <fieldset>
 
+        <input type="hidden" id="longitude" name="longitude" value="" />
+        <input type="hidden" id="latitude" name="latitude" value="" />
+
         <!-- Form Name -->
         <legend>Create quest</legend>
 
-        <!-- Text input-->
+        <!-- Longitude -->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="name">Name</label>
+            <label class="col-md-4 control-label" for="coordinates">Coordinates</label>
             <div class="col-md-4">
-                <input id="name" name="name" type="text" placeholder="quest name" class="form-control input-md" required="">
+                <input id="coordinates" name="coordinates" type="text" class="form-control input-md" readonly="readonly" value="" />
 
             </div>
         </div>
@@ -52,5 +55,9 @@
     </fieldset>
 </form>
 
+
+<script>
+    getLocation();
+</script>
 
 <?php include('blocks/foot.phtml'); ?>
