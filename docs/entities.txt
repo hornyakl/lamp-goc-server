@@ -1,0 +1,22 @@
+# quest
+
+* id
+* name
+* description
+* latitude
+* longitude
+* experience_point
+
+# user
+
+* id
+* name
+* (imei?)
+
+# user_quest
+
+* quest_id
+* user_id
+* started_at
+* finished_at
+* experience_pointű_gathered
