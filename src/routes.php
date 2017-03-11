@@ -2,6 +2,7 @@
 // Routes
 
 use questapp\models\Quest;
+use questapp\models\User;
 
 $app->get('/quest-create', function ($request, $response, $args) {
     return $this->renderer->render($response, 'quest-create.phtml', $args);

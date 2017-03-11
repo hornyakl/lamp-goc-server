@@ -26,7 +26,11 @@ class Quest extends Model implements JsonSerializable
         $returnArray['latitude'] = (float)$returnArray['latitude'];
         $returnArray['longitude'] = (float)$returnArray['longitude'];
 
-
         return $returnArray;
+    }
+
+    public function users()
+    {
+        return $this->hasManyThrough('questapp\models\User','questapp\models\UserQuest', 'quest_id', 'id');
     }
 }
