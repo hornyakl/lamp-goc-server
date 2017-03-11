@@ -1,21 +1,21 @@
 <?php
 return [
     'quests' => [
-        [
-            'id' => '1',
+        1 => [
+            'id' => 1,
             'name' => 'Trash',
             'description' => 'Bring out the trash.',
-            'latitude' => '49.600551',
-            'longitude' => '6.113637',
-            'experience_point' => '999',
+            'latitude' => 49.600551,
+            'longitude' => 6.113637,
+            'experience_point' => 999,
         ],
-        [
-            'id' => '2',
+        2 => [
+            'id' => 2,
             'name' => 'Run a kilometer',
             'description' => 'Run a kilometer around the building.',
-            'latitude' => '49.600551',
-            'longitude' => '6.113637',
-            'experience_point' => '1499',
+            'latitude' => 49.600551,
+            'longitude' => 6.113637,
+            'experience_point' => 1499,
         ]
     ],
     'settings' => [
