@@ -24,6 +24,10 @@
                 margin-bottom: 0;
             }
         </style>
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
     </head>
     <body>
         <h1>Slim</h1>
@@ -34,5 +38,17 @@
         <?php else: ?>
             <p>Try <a href="http://www.slimframework.com">SlimFramework</a>
         <?php endif; ?>
+
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        if (jQuery) {
+                            // jQuery is loaded
+                            alert("jQuery Yeah!");
+                        } else {
+                            // jQuery is not loaded
+                            alert("Doesn't Work");
+                        }
+                    });
+                </script>
     </body>
 </html>
