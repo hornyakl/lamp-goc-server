@@ -25,7 +25,14 @@ $app->post('/quest-saved', function ($request, $response, $args) {
 });
 
 $app->get('/quest-list', function ($request, $response, $args) {
-    $quests = (object)Quest::all()->toArray();
+    $userQuests = UserQuest::all()->toArray();
+    $ids = [];
+
+    foreach ($userQuests as $uq){
+        $ids[] = $uq['quest_id'];
+    }
+
+    $quests = (object)Quest::select()->whereNotIn('id', $ids)->get()->toArray();
 
     return $this->response->withJSON($quests);
 });
