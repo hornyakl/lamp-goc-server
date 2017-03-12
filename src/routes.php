@@ -64,8 +64,9 @@ $app->get('/quest-accepted', function ($request, $response, $args) {
 
     $userQuest->save();
 
-    //return $this->renderer->render($response, 'quest-accepted.phtml', $args);
-    return $this->response->withJSON((object)$userQuest->toArray());
+    return $this->renderer->render($response, 'quest-accepted.phtml', [
+        'quest' => $quest
+    ]);
 });
 
 $app->get('/achievements', function ($request, $response, $args) {

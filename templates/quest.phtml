@@ -1,10 +1,28 @@
 <?php include('blocks/head.phtml'); ?>
 
-<h1>Accept Quest</h1>
 
-<h2><?php echo $quest->name; ?></h2>
 
-<p><?php echo $quest->description; ?></p>
+<form class="form-horizontal" action="/quest-accepted" method="get">
+    <fieldset>
 
+        <input type="hidden" id="quest_id" name="quest_id" value="<?php echo $quest->id; ?>" />
+
+        <!-- Form Name -->
+        <legend>Accept quest</legend>
+
+        <h2><?php echo $quest->name; ?></h2>
+
+        <p><?php echo $quest->description; ?></p>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="send"></label>
+            <div class="col-md-4">
+                <button id="send" name="send" class="btn btn-primary">Accept quest</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
 
 <?php include('blocks/foot.phtml'); ?>
