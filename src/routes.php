@@ -37,6 +37,17 @@ $app->get('/quest-list', function ($request, $response, $args) {
     return $this->response->withJSON($quests);
 });
 
+$app->get('/quest', function ($request, $response, $args) {
+
+    $params = $request->getQueryParams();
+
+    $quest = Quest::find($params['quest_id']);
+
+    return $this->renderer->render($response, 'quest.phtml', [
+        'quest' => $quest
+    ]);
+});
+
 $app->get('/quest-accepted', function ($request, $response, $args) {
 
     $params = $request->getQueryParams();
