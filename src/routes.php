@@ -31,6 +31,20 @@ $app->get('/quest-list', function ($request, $response, $args) {
 });
 
 $app->get('/quest-accepted', function ($request, $response, $args) {
+
+    $params = $request->getQueryParams();
+
+    $quest = Quest::find($params['quest_id']);
+
+    $userQuest = new UserQuest([
+        'quest_id' => $params['quest_id'],
+        'user_id' => 2,
+        'started_at' => date("Y-m-d H:i:s", time()),
+        'experience_point_gathered' => $quest->experience_point
+    ]);
+
+    $userQuest->save();
+
     return $this->renderer->render($response, 'quest-accepted.phtml', $args);
 });
 
