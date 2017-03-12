@@ -40,12 +40,14 @@ $app->get('/quest-accepted', function ($request, $response, $args) {
         'quest_id' => $params['quest_id'],
         'user_id' => 2,
         'started_at' => date("Y-m-d H:i:s", time()),
+        'finished_at' => null,
         'experience_point_gathered' => $quest->experience_point
     ]);
 
     $userQuest->save();
 
-    return $this->renderer->render($response, 'quest-accepted.phtml', $args);
+    //return $this->renderer->render($response, 'quest-accepted.phtml', $args);
+    return $this->response->withJSON((object)$userQuest->toArray());
 });
 
 $app->get('/achievements', function ($request, $response, $args) {
