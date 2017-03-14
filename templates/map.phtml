@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0; padding: 0 }
+        #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA04Vp78LLw39Mrr87fBlDE4qg4Yceis2I&sensor=true">
+    </script>
+    <script type="text/javascript">
+        var map;
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng(46, 16),
+                zoom: 7
+            };
+            map = new google.maps.Map(document.getElementById("map"),
+                mapOptions);
+        }
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body onload="initialize()">
+<div id="map" style="width:100%; height:100%"></div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $.getJSON("https://goc-lamp.tk/all-quest", function(quests) {
+            $.each(quests, function(key, data) {
+                var latLng = new google.maps.LatLng(data.latitude, data.longitude);
+                var marker = new google.maps.Marker({
+                    position: latLng,
+                    title: data.title
+                });
+
+                marker.info = new google.maps.InfoWindow({
+                    content: '<b>' + data.name + '</b>: ' + data.description
+                });
+
+                google.maps.event.addListener(marker, 'click', function() {
+                    marker.info.open(map, marker);
+                });
+
+                marker.setMap(map);
+            });
+        });
+    });
+</script>
+</body>
+</html>
