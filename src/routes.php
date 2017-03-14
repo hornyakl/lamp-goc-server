@@ -24,11 +24,9 @@ $app->post('/quest-saved', function ($request, $response, $args) {
     return $this->renderer->render($response, 'quest-saved.phtml', $args);
 });
 
-//$app->get('/map', function ($request, $response, $args) {
-//    return $this->renderer->render($response, 'quest-accepted.phtml', [
-//        'quest' => $quest
-//    ]);
-//});
+$app->get('/map', function ($request, $response, $args) {
+    return $this->renderer->render($response, 'map.phtml');
+});
 
 $app->get('/all-quest', function ($request, $response, $args) {
     $quests = (object)Quest::all()->toArray();
