@@ -24,6 +24,11 @@ $app->post('/quest-saved', function ($request, $response, $args) {
     return $this->renderer->render($response, 'quest-saved.phtml', $args);
 });
 
+$app->get('/all-quest', function ($request, $response, $args) {
+    $quests = (object)Quest::all()->toArray();
+    return $this->response->withJSON($quests);
+});
+
 $app->get('/quest-list', function ($request, $response, $args) {
     $userQuests = UserQuest::all()->toArray();
     $ids = [];
