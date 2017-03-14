@@ -24,9 +24,23 @@ $app->post('/quest-saved', function ($request, $response, $args) {
     return $this->renderer->render($response, 'quest-saved.phtml', $args);
 });
 
+//$app->get('/map', function ($request, $response, $args) {
+//    return $this->renderer->render($response, 'quest-accepted.phtml', [
+//        'quest' => $quest
+//    ]);
+//});
+
 $app->get('/all-quest', function ($request, $response, $args) {
     $quests = (object)Quest::all()->toArray();
-    return $this->response->withJSON($quests);
+
+    /* @var $response Slim\Http\Response */
+    $response = $this->response;
+
+    return $response
+        ->withHeader('Access-Control-Allow-Origin', '*')
+        ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+        ->withHeader('Access-Control-Allow-Methods', 'GET')
+        ->withJSON($quests);
 });
 
 $app->get('/quest-list', function ($request, $response, $args) {
