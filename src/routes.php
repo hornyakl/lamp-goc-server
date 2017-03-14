@@ -40,6 +40,7 @@ $app->get('/all-quest', function ($request, $response, $args) {
         ->withHeader('Access-Control-Allow-Origin', '*')
         ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
         ->withHeader('Access-Control-Allow-Methods', 'GET')
+        ->withHeader('Content-type', 'application/json')
         ->withJSON($quests);
 });
 
