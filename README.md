@@ -37,4 +37,6 @@ This repository contains the server part.
 * app & web find a name for our platform
 * register a domain (if platform name figured out)
 * create a website (one page site, download links android/ios...)
+* create a kanban board: https://taiga.io/
+* web api unit tests
 * app & web create a designed landing page for our application and webpage
