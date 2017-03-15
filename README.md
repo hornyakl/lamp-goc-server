@@ -35,4 +35,6 @@ This repository contains the server part.
 * app make radar view as a true radar, animated part going in circles and showing quests only under the animation (should be switchable)
 * app make quest icons appear more stable on camera view (sometimes they disappear - probably location fluctuation)
 * app & web find a name for our platform
+* register a domain (if platform name figured out)
+* create a website (one page site, download links android/ios...)
 * app & web create a designed landing page for our application and webpage
