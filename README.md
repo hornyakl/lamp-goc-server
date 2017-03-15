@@ -14,3 +14,17 @@ This repository contains the server part.
 * web real quest list
 * web my status (list XP summary and quest list)
 
+* app & web user authentication (instance id, social media, other?)
+* app port to Android 5.0
+* app abstract out http calls
+* app accept quest from radar view
+* app & web check and make better to be only able to accept nearby quests
+* app create notification on lock screen if a quest becomes acceptable (near enough)
+* app create notification on lock screen if somebody accepts a quest created by you
+* app integrate radar view to camera view on a small part of the screen
+* app change original radar view to map view (webview or native activity?)
+* app & web design and implement group quests (quests that should or must be done by multiple players)
+* app & web design and implement higher level quests (which can only be done after reaching a certain experience)
+* app & web design and implement leveling system
+* app & web design and implement xp giving system (how much xp and how can be given for a certain quest)
+* app & web design and implement quest / game? types (should they create different virtual worlds?)
