@@ -40,3 +40,26 @@ This repository contains the server part.
 * create a kanban board: https://taiga.io/
 * web api unit tests
 * app & web create a designed landing page for our application and webpage
+*
+*
+* implement multiple worlds
+  * default world - any1 can create, any1 can complete quests
+  * private worlds - any1 can create, invited peapoles can do quests
+  * public worlds - only we can create, any1 can do quests
+  * separate xp per world
+  * add world currency
+* add quest requriements
+  * min xp (or level)
+  * another quest
+  * other world xp
+  * other world quest
+* group quests
+* repeatable quests
+  * once per person
+  * daily per person, etc.
+* timed quests
+  * eg: 3-4pm every day 
+* include a promise library 
+* add fisheye transformed map to radar
+* use camera api2 with some wrapper library
+* improve nearby quest display by some cool algorith using all sensor data https://www.google.hu/search?espv=2&q=android+dead+reckoning+github&oq=android+dead+reckoning+github&gs_l=serp.3..33i21k1.120569.122795.0.122976.7.7.0.0.0.0.384.1087.3-3.3.0....0...1c.1.64.serp..4.3.1087...0i22i30k1._mIeKU7vf8Y
