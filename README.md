@@ -13,8 +13,9 @@ This repository contains the server part.
 * web create quest
 * web real quest list
 * web my status (list XP summary and quest list)
-
+* 
 * app & web user authentication (instance id, social media, other?)
+* app & web design and create profile page for quest givers, players and mixed accounts too
 * app port to Android 5.0
 * app abstract out http calls
 * app accept quest from radar view
@@ -28,3 +29,10 @@ This repository contains the server part.
 * app & web design and implement leveling system
 * app & web design and implement xp giving system (how much xp and how can be given for a certain quest)
 * app & web design and implement quest / game? types (should they create different virtual worlds?)
+* app plan and create maximum distance to show quests on camera and map view (should be customizable by user with protection based on maximum quests to show - rendering should be smooth)
+* app make radar view auto-adjusting for scale based on quest density (scale should be shown somewhere on screen)
+* app make quests outside of radar scale appear as arrows at the edge of radar view (until maximum distance of rendering)
+* app make radar view as a true radar, animated part going in circles and showing quests only under the animation (should be switchable)
+* app make quest icons appear more stable on camera view (sometimes they disappear - probably location fluctuation)
+* app & web find a name for our platform
+* app & web create a designed landing page for our application and webpage
