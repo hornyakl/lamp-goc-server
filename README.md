@@ -15,6 +15,11 @@ This repository contains the server part.
 * web my status (list XP summary and quest list)
 * 
 * app & web user authentication (instance id, social media, other?)
+** https://developer.android.com/training/id-auth/identify.html#IdentifyUser
+** What account types to support?
+*** Google
+*** Facebook
+*** Other?
 * app & web design and create profile page for quest givers, players and mixed accounts too
 * app port to Android 5.0
 * app abstract out http calls
